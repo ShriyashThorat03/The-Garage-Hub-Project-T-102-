@@ -4,7 +4,7 @@ body{
     padding: 0px;
     font-family: sans-serif;
     box-sizing: border-box;
-   
+
     background-size: cover;
     background-attachment: fixed;
     opacity: 0.9;
@@ -18,25 +18,24 @@ body{
 
 .formWraper{
     display: flex;
-
     width: 60%;
     height: 600px;
-    background-color: yellowgreen;
+    background-color: rgb(191, 120, 164);
     margin-top: 50px;
     border-radius: 10px;
     box-shadow:0px 0px 20px black;
 }
  
 /* code for left sectin of form */
-.formDiv{
-    width: 50%;
+.formDiv, .signIn, .passwordreset{
+    width: 60%;
     padding: 2%;
-    background-color: lavender;
     text-align: center;
     border-radius: 10px 0px 0px 10px;
+    background-color: rgb(191, 120, 164);
 }
 .formDiv h2 {
-    color: green;
+    color: rgb(9, 11, 9);
     margin-top: -5px;
 }
  
@@ -51,7 +50,8 @@ body{
     border-radius: 0px 10px 10px 0px;
 }  
 .welcomeDiv h2 {
-    margin-top: 150px;
+    margin-top: 110px;
+
 }
  
  
@@ -77,13 +77,13 @@ body{
 .text{
     font-size: small;
 }
-.orDiv {
+.orDiv, .orDiv2 {
     width: 10%;
     margin: 0 auto;
-    background-color: lavender;
     position: relative;
     top: -16px;
     justify-content: center;
+    background-color:  rgb(191, 120, 164);
 }
  
 /* code for form input fields */
@@ -126,7 +126,7 @@ input:focus{
 .btn{
     width: 70%;
     padding: 15px;
-    background-color: green;
+    background-color:  rgb(75, 6, 72);
     margin-top: 15px;
     color: lavender;
     border-radius: 20px;
@@ -134,8 +134,10 @@ input:focus{
 }
 .btn2{
     width: 70%;
-    padding: 15px;
-    background-color:transparent;
+    padding: 13px;
+    background-color:rgb(75, 6, 72);
+    font-size: 16px;
+    font-weight: 600;
     margin-top: 15px;
     color: lavender;
     border-radius: 20px;
@@ -144,8 +146,8 @@ input:focus{
 }
  
 /* CSS mouse hover efects */
-.btn:hover, .btn2:hover, .icon:hover{
-    background-color: rgb(7, 80, 35);
+.btn:hover, .btn2:hover, .icon:hover, .iconBtn:hover{
+    background-color: rgb(213, 64, 156);
     color: whitesmoke;
 }
 
@@ -156,17 +158,24 @@ input:focus{
     }
 }
 @media screen and (max-width: 800px){
-    .formDiv{
+    .formDiv, .formWraper, .signIn, .passwordreset{
         width: 90%;
         border-radius: 10px 10px 10px 10px;
     }
     .welcomeDiv{
         display: none;
     }
+    .hideBtn{
+        display: block !important;
+    }
+    .eye{
+        position: sticky;
+    }
 }
 
 .fa{
     margin-right: 10px;
+    margin-top: -2px;
 }
 
 .eye{
@@ -174,3 +183,75 @@ input:focus{
     left: -35px;
     top: -3.7px;
 }
+
+/* login/ sign code*/
+.SignInText{
+    margin-top: -15px;
+    font-size: 27px;
+    color:black;
+    font-weight: 700;
+
+}
+
+.textStyle{
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: -8px;
+}
+
+.hoverColor:hover{
+    color: blue;
+    cursor: pointer;
+}
+
+.hideBtn,  .signIn, .passwordreset, .signUpBtn, .passwordResetBtn{
+    display: none;
+}
+
+
+.signIn{
+    background-color:rgb(191, 120, 164);
+}
+
+.orDiv2{
+    background-color: rgb(191, 120, 164);
+    position: relative;
+    top: 1px;
+}
+
+.line2{
+    border:0.1px solid black;
+    width: 70%;
+    margin-bottom: -10px;
+}
+
+.iconBtn{
+    width: 50%;
+    padding: 10px;
+    background-color: rgb(75, 6, 72);
+    border-radius: 20px;
+    margin-bottom: 5px;
+    color: honeydew;
+    border-style: none;
+}
+
+.icone2{
+    margin-right: 2px;
+    
+}
+
+.passwordreset{
+    background-color:  rgb(191, 120, 164);
+}
+
+.passwordreset{
+   padding-top: 110px;
+}
+
+.textAboveBtn{
+    font-size: 12px;
+    margin-top: 50px;
+    margin-bottom: -5px;
+
+}
+

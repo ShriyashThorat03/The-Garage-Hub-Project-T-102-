@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
+        <!-- jquery cdn -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
       
@@ -20,7 +22,7 @@
  
             <!-- Left section of responsive registration form -->
  
-            <div class="formDiv">
+            <div class="formDiv" id="Register">
                 <h2>Create Account</h2>
                 <p class="text"> Sign Up with Social Media</p>
  
@@ -90,20 +92,20 @@
 
                 <script>
                     function confuntion(){
-                        var x = document.getElementById("confirmInput");
-                        var y = document.getElementById("hide3");
-                        var z = document.getElementById("hide4");
+                        var a = document.getElementById("confirmInput");
+                        var b = document.getElementById("hide3");
+                        var c = document.getElementById("hide4 ");
 
-                        if(x.type==='password'){
-                            x.type = "text";
-                            y.style.display= "block";
-                            z.style.display= "none";
+                        if(a.type==='password'){
+                            a.type = "text";
+                            b.style.display= "block";
+                            c.style.display= "none";
                         }
 
                         else{
-                            x.type = "password";
-                            y.style.display= "none";
-                            z.style.display= "block";
+                            a.type = "password";
+                            b.style.display= "none";
+                            c.style.display= "block";
                         }
                     }
                 </script>
@@ -115,23 +117,163 @@
                 </div>
                 <button class="btn">Register</button>
 
+                 <!--  login button, for mobile only -->
                 <div class="hideBtn loginBtn-mobile textStyle">
                     <p>Have an account Already?
                         <span class="hoverColor">Login</span>
                     </p>
                 </div>
             </div>
+
+            <!-------------------------code for sign in/login form----------------------------------------->
+
+            <div class="signIn" id="signIn">
+                <h2 class="SignInText">Login</h2>
+                <p class="text"> Log In  with Social Media</p>
  
+             <!-- Font Awesome Icons  for Sign In from -->
+                <!-- <div class="socialBtn">
+                    <div class="facebook icon"><i class="fab fa-facebook-f"></i></div>
+                    <div class="twitter icon"><i class="fab fa-twitter"></i></div>
+                    <div class="instagram icon"><i class="fab fa-instagram"></i></i></div>
+                </div> -->
+
+                <div>
+                    <button type="submit" class="iconBtn">
+                        <span class="facebook icone2">Facebook
+                            <i class="fab fa-facebook-f"></i>
+                        </span>
+                    </button>
+                </div>
+
+                <div>
+                    <button type="submit" class="iconBtn">
+                        <span class="twitter icone2">Twitter
+                            <i class="fab fa-twitter"></i>
+                        </span>
+                    </button>
+                </div>
+
+                <div>
+                    <button type="submit" class="iconBtn">
+                        <span class="google icone2">Google
+                            <i class="fab fa-google"></i>
+                        </span>
+                    </button>
+                </div>
+                 
+                <!--Horizontal Line-->
+                <hr class="line2">
+                <div class="orDiv2">Or</div>
+
+                <p class="text"> Login with email address</p>
+               
+                <div class="formGroup">
+                    <i class="far fa-envelope"></i>
+                    <input type="email" name="email" id="email" placeholder="Email">
+                </div>
+
+                <div class="formGroup">
+                    <i class="far fa-lock"></i>
+                    <input type="password" name="password" id="logineye" placeholder="Password">
+                    <span class="eye" onclick="eye1()">
+                        <i id="hide5" class="far fa-eye"></i>
+                        <i id="hide6" class="far fa-eye-slash"></i>
+                    </span>
+                </div>
+
+                <script>
+                    function eye1(){
+                        var p = document.getElementById("logineye");
+                        var q = document.getElementById("hide5");
+                        var r = document.getElementById("hide6");
+
+                        if(p.type==='password'){
+                            p.type = "text";
+                            q.style.display= "block";
+                            r.style.display= "none";
+                        }
+
+                        else{
+                            p.type = "password";
+                            q.style.display= "none";
+                            r.style.display= "block";
+                        }
+                    }
+                </script>
+
+                <div class="checkBox">
+                    <input type="checkbox" name="checkbox" id="checkbox">
+                    <span class="text">I Agree with Term & Conditions.</span>
+                </div>
+                <button class="btn">LogIn</button>
+
+                 <!--  lcreate account  button, for mobile only -->
+                <div class="hideBtn signUpBtn-mobile textStyle">
+                    <p>Dont have an account?
+                        <span class="hoverColor">Create Account</span>
+                    </p>
+                </div>
+                
+                <!-- Passwordd reset button for mobile only-->
+                <div class="hideBtn forgotPassword textStyle">
+                    <p>Forgot Password?
+                        <span class="hoverColor">Reset</span>
+                    </p>
+                </div>
+            </div>
+
+            <!------------------------Password Reset Form----------------------------->
+
+            <div class="passwordreset" id="passwordreset">
+                <h2>Password Reset</h2>
+                <p class="text"> To retrive your password, please enter your account's email address.</p>
+ 
+                <div class="formGroup">
+                    <i class="far fa-envelope"></i>
+                    <input type="email" name="email" id="email" placeholder="Email">
+                </div>
+
+                <button class="btn">Submit Now</button>
+
+                 <!--  login button, for mobile only -->
+                <div class="hideBtn loginBtn-mobile textStyle">
+                    <p>remember your password?
+                        <span class="hoverColor">Login</span>
+                    </p>
+                </div>
+            </div>
+
             <!-- Right section of responsive registration form -->
             <div class="welcomeDiv">
                 <h2>Welcome Back!</h2>
                 <p class="text">Get in touch with us for our news letter and more updates.</p>
-                <button class="btn2">SIGN IN</button>
-            </div>
 
- 
+                <!----Adding SignIn toggle button----->
+                <div class="toggleBtn loginBtn">
+                    <p class="textAboveBtn">Have an account already?</p>
+                    <button type="submit"  class="btn2">LogIn</button>
+                </div>
+
+                <!--Adding Create account toggle button -->
+                <div class="toggleBtn signUpBtn">
+                    <p class="textAboveBtn">Dont have an account?</p>
+                    <button type="submit"  class="btn2">Create Account</button>
+                </div>
+
+                    <!-- adding password reset button-->
+                    <div class="passwordResetBtn">
+                        <p class="textAboveBtn">Forgot your passsword?</p>
+                        <button type="submit"  class="btn2">Reset Password</button>
+                    </div>
+
+
+            </div>
         </dive>
     </div>
+
+    <!-- linking jquery file with html-->
+    <script src="jquery.js"></script>
  
 </body>
  
